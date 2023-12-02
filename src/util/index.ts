@@ -1,5 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
 
+const day = Number(process.argv[2].replace('--day=', ''));
+
 export const formatDay = (day: number | string) =>
   day.toString().padStart(2, '0');
 
@@ -27,7 +29,7 @@ export function parseInput<T>(options: { split: SplitOptions<T> }): T[];
 export function parseInput<T>({
   split,
 }: { split?: SplitOptions<T> | false } = {}) {
-  const input = readFileSync(`./src/day${formatDay(2!)}/input.txt`, {
+  const input = readFileSync(`./src/day${formatDay(day)}/input.txt`, {
     encoding: 'utf-8',
   });
 

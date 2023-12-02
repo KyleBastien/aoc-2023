@@ -1,7 +1,9 @@
 import { formatDay } from './util';
 
-const day = Number(2);
-const part = Number(2);
+// Command to invoke script looks like:
+// yarn start --day=1 --part=2
+const day = Number(process.argv[2].replace('--day=', ''));
+const part = Number(process.argv[3].replace('--part=', ''));
 
 const outputSolution = (part: number) =>
   console.log(
