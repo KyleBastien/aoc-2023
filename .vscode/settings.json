@@ -1,0 +1,60 @@
+{
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.exclude": {
+    "**/*.hot-update.*": true,
+    "**/.cache-loader": true,
+    "**/coverage": false,
+    "**/node_modules": false,
+    "**/logs": false,
+    "**/*.log": true
+  },
+  "search.exclude": {
+    "**/build": true,
+    "**/coverage": true,
+    "**/node_modules": true,
+    "**/logs": true,
+    "**/.yarn": true,
+    "**/*.log": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "prettier.prettierPath": "node_modules/prettier/index.js",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "cSpell.words": [
+    "codegen",
+    "Configurator",
+    "DOCUSIGN",
+    "grpc",
+    "HMAC",
+    "MIXPANEL",
+    "oltp",
+    "opentelemetry",
+    "OTEL",
+    "otlp",
+    "WEBSTORE"
+  ],
+  "eslint.validate": ["json"],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "files.associations": {
+    "**/azure-pipelines.yml": "azure-pipelines",
+    ".azure-pipelines/**/*.yml": "azure-pipelines"
+  }
+}

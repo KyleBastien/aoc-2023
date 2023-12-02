@@ -27,12 +27,9 @@ export function parseInput<T>(options: { split: SplitOptions<T> }): T[];
 export function parseInput<T>({
   split,
 }: { split?: SplitOptions<T> | false } = {}) {
-  const input = readFileSync(
-    `./src/day${formatDay(process.env.npm_config_day!)}/input.txt`,
-    {
-      encoding: 'utf-8',
-    }
-  );
+  const input = readFileSync(`./src/day${formatDay(1!)}/input.txt`, {
+    encoding: 'utf-8',
+  });
 
   if (split === false) return input;
 

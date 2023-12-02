@@ -1,7 +1,7 @@
 import { formatDay } from './util';
 
-const day = Number(process.env.npm_config_day ?? 0);
-const part = Number(process.env.npm_config_part ?? 0);
+const day = Number(1);
+const part = Number(2);
 
 const outputSolution = (part: number) =>
   console.log(
