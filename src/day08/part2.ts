@@ -1,4 +1,5 @@
 import { parseInput } from '../util';
+import { handleInput } from './part1';
 
 const input = parseInput({ split: { mapper: false } });
 
@@ -35,24 +36,6 @@ const input = parseInput({ split: { mapper: false } });
  *
  * Simultaneously start on every node that ends with A. How many steps does it take before you're only on nodes that end with Z?
  */
-interface Node {
-  left: string;
-  right: string;
-}
-
-function handleInput(lines: string[]): [string, Map<string, Node>] {
-  const instructions = lines[0];
-
-  const graph: Map<string, Node> = new Map();
-
-  for (const line of lines.slice(2)) {
-    const [node, left, right] = line.match(/[A-Z]{3}/g)!;
-    graph.set(node, { left, right });
-  }
-
-  return [instructions, graph];
-}
-
 function part2(input: string[]): number {
   const [instructions, graph] = handleInput(input);
 

@@ -34,12 +34,12 @@ const input = parseInput({ split: { mapper: false } });
  * ZZZ = (ZZZ, ZZZ)
  * Starting at AAA, follow the left/right instructions. How many steps are required to reach ZZZ?
  */
-interface Node {
+export interface Node {
   left: string;
   right: string;
 }
 
-function handleInput(lines: string[]): [string, Map<string, Node>] {
+export function handleInput(lines: string[]): [string, Map<string, Node>] {
   const instructions = lines[0];
 
   const graph: Map<string, Node> = new Map();
