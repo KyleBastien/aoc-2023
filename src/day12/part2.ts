@@ -34,7 +34,6 @@ function part2(rows: string[]): number {
   let res = 0;
   for (const row of rows) {
     const [data, numbers] = row.split(' ');
-    console.log('data', data);
     // Split the numbers by comma and convert to numbers
     const originalCounts: number[] = numbers.split(',').map(Number);
     // Release the entire counts array 5 times, e.g., 1,1,3 -> 1,1,3,1,1,3,1,1,3,1,1,3,1,1,3
@@ -42,11 +41,8 @@ function part2(rows: string[]): number {
     for (let i = 0; i < 4; i++) {
       unfoldedCounts.push(...originalCounts);
     }
-    console.log('unfoldedCounts', unfoldedCounts);
     const line = (data + '?').repeat(4) + data + '.';
-    console.log('line', line);
     const count = getCount({}, line, unfoldedCounts, 0, 0, 0);
-    console.log('count', count);
     res += count;
   }
   return res;
