@@ -1,4 +1,4 @@
-import { parseInput } from '../util';
+import { parseInput } from '../util/index.js';
 
 const input = parseInput();
 
