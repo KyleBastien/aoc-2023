@@ -1,5 +1,5 @@
-import { parseInput } from '../util';
-import { fillGrid, handleInput } from './part1';
+import { parseInput } from '../util/index.js';
+import { fillGrid, handleInput } from './part1.js';
 
 const input = parseInput({ split: false });
 
@@ -59,7 +59,7 @@ const input = parseInput({ split: false });
  * In exactly 5000 steps, he can reach 16733044 garden plots.
  * However, the step count the Elf needs is much larger! Starting from the garden plot marked S on your infinite map, how many garden plots could the Elf reach in exactly 26501365 steps?
  */
-function sum(first: number, second: number) {
+export function sum(first: number, second: number) {
   return first + second;
 }
 

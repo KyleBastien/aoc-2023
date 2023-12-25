@@ -1,4 +1,4 @@
-import { parseInput } from '../util';
+import { parseInput } from '../util/index.js';
 
 const input = parseInput({ split: false });
 
@@ -83,11 +83,11 @@ const input = parseInput({ split: false });
  *
  * Starting from the garden plot marked S on your map, how many garden plots could the Elf reach in exactly 64 steps?
  */
-type Point = [number, number];
+export type Point = [number, number];
 type Grid = ('S' | '.' | '#')[][];
 type Instructions = [start: Point, grid: Grid];
 
-class TupleSet<TTuple extends unknown[]> {
+export class TupleSet<TTuple extends unknown[]> {
   #set: Set<string>;
 
   constructor(iterable?: TTuple[] | TupleSet<TTuple> | Set<TTuple>) {
@@ -163,7 +163,7 @@ class TupleSet<TTuple extends unknown[]> {
   }
 }
 
-class Points extends TupleSet<Point> {}
+export class Points extends TupleSet<Point> {}
 
 export function handleInput(text: string): Instructions {
   let start: Point = [0, 0];

@@ -1,15 +1,17 @@
-import { formatDay } from './util';
+import { formatDay } from './util/index.js';
 
 // Command to invoke script looks like:
 // yarn start --day=1 --part=2
 const day = Number(process.argv[2].replace('--day=', ''));
 const part = Number(process.argv[3].replace('--part=', ''));
 
-const outputSolution = (part: number) =>
+const outputSolution = async (part: number) =>
   console.log(
     `Day ${day} | Part ${part} - Solution: ${
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      require(`./day${formatDay(day)}/part${part}.js`).default
+      await (
+        await import(`./day${formatDay(day)}/part${part}.js`)
+      ).default
     }`,
   );
 
@@ -23,4 +25,4 @@ const validate = (type: 'day' | 'part', num: number, max: number) => {
 validate('day', day, 25);
 validate('part', part, 2);
 
-outputSolution(part);
+await outputSolution(part);

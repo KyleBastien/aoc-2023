@@ -1,17 +1,17 @@
 {
-	"compilerOptions": {
-		"strict": true,
-    "module": "commonjs",
+  "compilerOptions": {
+    "strict": true,
+    "module": "ES2022",
     "moduleResolution": "node",
-		"target": "es2019",
+    "target": "es2019",
     "sourceMap": false,
     "inlineSourceMap": true,
     "sourceRoot": "src",
-		"outDir": "./dist",
-		"declaration": false,
-		"removeComments": false,
-		"alwaysStrict": true,
-		"allowSyntheticDefaultImports": true,
-		"pretty": true
-	}
+    "outDir": "./dist",
+    "declaration": false,
+    "removeComments": false,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "pretty": true
+  }
 }
